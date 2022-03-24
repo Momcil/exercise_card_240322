@@ -1,5 +1,5 @@
 //------filterByTag.js------------------------------------------------
-console.clear();
+/*console.clear();
 
 const filterForm = document.querySelector("[data-js=filter-form]");
 const cardsContainer = document.querySelector("[data-js=cards]");
@@ -48,4 +48,4 @@ function renderCards() {
       `;
       cardsContainer.append(cardElement);
     });
-}
+} */
