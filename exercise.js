@@ -1,7 +1,8 @@
-//------fromForm.js--------------------------------------------
 const cardsContainer = document.querySelector("[data-js=cards]");
 const form = document.querySelector("[data-js=form]");
+const filterForm = document.querySelector("[data-js=filter-form]");
 
+let currentFilter = "all";
 let cards = [
   {
     question: "What is HTML?",
@@ -40,41 +41,28 @@ form.addEventListener("submit", (event) => {
   questionElement.focus();
 });
 
-
-console.log(cards);
-//------fromForm.js-finish--------------------------------------------
-//------filterByTag.js------------------------------------------------
-//console.clear();
-
-const filterForm = document.querySelector("[data-js=filter-form]");
-
-
-let currentFilter = "all";
-
-
-
 filterForm.addEventListener("change", () => {
   currentFilter = filterForm.elements["tag-filter"].value;
   renderCards();
 });
 
-renderCards();
-
 function renderCards() {
   cardsContainer.innerHTML = "";
-  //------------filter-------------------
-  cards.filter((card) => card.tags.includes(currentFilter) || currentFilter === "all"
-    ).forEach((card) => {
+
+  cards
+    .filter(
+      (card) => card.tags.includes(currentFilter) || currentFilter === "all"
+    )
+    .forEach((card) => {
       const cardElement = document.createElement("li");
       cardElement.className = "card";
       cardElement.innerHTML = `
-        <p>${card.question}</p>
-        <ul role="list" class="card__tag-list">
-          ${card.tags
-            .map((tag) => `<li class="card__tag">${tag}</li>`)
-            .join("")}
-        </ul>
-      `;
+      <p>${card.question}</p>
+      <p>${card.answer}</p>
+      <ul role="list" class="card__tag-list">
+        ${card.tags.map((tag) => `<li class="card__tag">${tag}</li>`).join("")}
+      </ul>
+    `;
       cardsContainer.append(cardElement);
     });
 }

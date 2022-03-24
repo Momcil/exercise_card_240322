@@ -31,63 +31,62 @@
 
       <button>Create Card</button>
     </form>
-
+    <br />
+    <!--Nicht schön, aber es funktioniert:D-->
     <form data-js="filter-form" aria-labeledby="form-heading">
-        <fieldset>
-          <legend id="form-heading">Filter by tags:</legend>
-          <input
-            name="tag-filter"
-            value="all"
-            class="tag-input"
-            id="tag-all"
-            type="radio"
-            checked
-          />
-          <label class="tag-label" for="tag-all">all</label>
-          <input
-            name="tag-filter"
-            value="basic"
-            class="tag-input"
-            id="tag-basic"
-            type="radio"
-          />
-          <label class="tag-label" for="tag-basic">basic</label>
-          <input
-            name="tag-filter"
-            value="css"
-            class="tag-input"
-            id="tag-css"
-            type="radio"
-          />
-          <label class="tag-label" for="tag-css">css</label>
-          <input
-            name="tag-filter"
-            value="git"
-            class="tag-input"
-            id="tag-git"
-            type="radio"
-          />
-          <label class="tag-label" for="tag-git">git</label>
-          <input
-            name="tag-filter"
-            value="html"
-            class="tag-input"
-            id="tag-html"
-            type="radio"
-          />
-          <label class="tag-label" for="tag-html">html</label>
-          <input
-            name="tag-filter"
-            value="shell"
-            class="tag-input"
-            id="tag-shell"
-            type="radio"
-          />
-          <label class="tag-label" for="tag-shell">shell</label>
-        </fieldset>
-      </form>
-      
-
+      <fieldset>
+        <legend id="form-heading">Filter by tags:</legend>
+        <input
+          name="tag-filter"
+          value="all"
+          class="tag-input"
+          id="tag-all"
+          type="radio"
+          checked
+        />
+        <label class="tag-label" for="tag-all">all</label>
+        <input
+          name="tag-filter"
+          value="basic"
+          class="tag-input"
+          id="tag-basic"
+          type="radio"
+        />
+        <label class="tag-label" for="tag-basic">basic</label>
+        <input
+          name="tag-filter"
+          value="css"
+          class="tag-input"
+          id="tag-css"
+          type="radio"
+        />
+        <label class="tag-label" for="tag-css">css</label>
+        <input
+          name="tag-filter"
+          value="git"
+          class="tag-input"
+          id="tag-git"
+          type="radio"
+        />
+        <label class="tag-label" for="tag-git">git</label>
+        <input
+          name="tag-filter"
+          value="html"
+          class="tag-input"
+          id="tag-html"
+          type="radio"
+        />
+        <label class="tag-label" for="tag-html">html</label>
+        <input
+          name="tag-filter"
+          value="shell"
+          class="tag-input"
+          id="tag-shell"
+          type="radio"
+        />
+        <label class="tag-label" for="tag-shell">shell</label>
+      </fieldset>
+    </form>
     <ul role="list" class="card-list" data-js="cards"></ul>
   </body>
 </html>
